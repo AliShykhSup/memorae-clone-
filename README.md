@@ -170,6 +170,18 @@ The current system **simulates** the automation workflow with demo leads and mes
 - OAuth token-based authentication
 - Webhook configuration for real-time updates
 
+### Production Security Considerations
+
+⚠️ **Before deploying to production, you MUST:**
+
+1. **Implement Rate Limiting**: Install and configure `express-rate-limit` to prevent abuse
+2. **Enable HTTPS**: Use SSL/TLS certificates for all traffic
+3. **Add Security Headers**: Install and configure `helmet` middleware
+4. **Set Strong JWT Secret**: Use a cryptographically secure random secret
+5. **Configure MongoDB Authentication**: Enable authentication and use secure credentials
+
+See [SECURITY.md](SECURITY.md) for detailed security recommendations and implementation guide.
+
 ## 🛠️ Technologies Used
 
 ### Backend
